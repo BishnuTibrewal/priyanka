@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/priyanka/static/css/main.f855e6bc.css",
+    "main.js": "/priyanka/static/js/main.022f90a5.js",
+    "static/js/453.b24cc290.chunk.js": "/priyanka/static/js/453.b24cc290.chunk.js",
+    "index.html": "/priyanka/index.html",
+    "main.f855e6bc.css.map": "/priyanka/static/css/main.f855e6bc.css.map",
+    "main.022f90a5.js.map": "/priyanka/static/js/main.022f90a5.js.map",
+    "453.b24cc290.chunk.js.map": "/priyanka/static/js/453.b24cc290.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.022f90a5.js"
+  ]
+}
