@@ -16,6 +16,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export default function Slide2(props) {
   const [open, setOpen] = React.useState(false);
@@ -36,7 +37,7 @@ export default function Slide2(props) {
         <ImageList sx={{ width: 500, height: 450 }}>
           <ImageListItem key="Subheader" cols={2}>
             <ListSubheader component="div">
-              Lets rejoice some moments?...Scroll Down!
+              <b>Lets rejoice some moments?...Scroll Down!</b>
             </ListSubheader>
           </ImageListItem>
           {itemData.map((item) => (
@@ -87,9 +88,22 @@ export default function Slide2(props) {
               <br />
               {"Here’s to eternity of love and laughter."}
             </Typography>
+            <Typography variant="h5" component="div" mt={5}>
+              Lovin' you's the antidote
+            </Typography>
+            <FavoriteIcon></FavoriteIcon>
           </CardContent>
-          <CardActions>
-            <Button size="small" onClick={handleClickOpen}>Learn More</Button>
+          <CardActions
+            sx={{
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "flex-end",
+              marginTop: "100px",
+            }}
+          >
+            <Button size="small" onClick={handleClickOpen}>
+              WANNA SEE MORE?
+            </Button>
           </CardActions>
         </Card>
       </Grid>
@@ -99,13 +113,11 @@ export default function Slide2(props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"How about you?"}
-        </DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"How about you?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             Are you ready to love and handle me for the rest of the life?
-            <br/>
+            <br />
             <b>Disclaimer: Clicking on Disagree wont be of any use !</b>
           </DialogContentText>
         </DialogContent>

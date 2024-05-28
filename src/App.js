@@ -3,6 +3,8 @@ import Slide1 from "./Components/Slide1";
 import { useState } from "react";
 import Slide2 from "./Components/Slide2";
 import Slide3 from "./Components/Slide3";
+import Alert from "@mui/material/Alert";
+import CheckIcon from "@mui/icons-material/Check";
 
 function App() {
   const [slide1visibility, setslide1visibility] = useState(true);
@@ -26,6 +28,9 @@ function App() {
       {slide1visibility && <Slide1 closeSlide1={closeSlide1}></Slide1>}
       {slide2visibility && <Slide2 closeSlide2={closeSlide2}></Slide2>}
       {slide3visibility && <Slide3></Slide3>}
+      <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+        <b>Here is a gentle reminder, I love you !!.</b>
+      </Alert>
     </div>
   );
 }

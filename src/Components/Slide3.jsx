@@ -8,8 +8,8 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Rating from "@mui/material/Rating";
-import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Grid } from "@mui/material";
 
 const steps = [
@@ -64,9 +64,18 @@ export default function Slide3() {
         height: "80vh",
         padding: "20px",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
       }}
     >
+      <Grid>
+        <img
+          src={"—Pngtree—happy birthday font text balloon_8186777.png"}
+          alt={"birthday"}
+          loading="lazy"
+          width={"300px"}
+        />
+      </Grid>
       <Box sx={{ maxWidth: 400 }}>
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((step, index) => (
@@ -107,7 +116,7 @@ export default function Slide3() {
         {activeStep === steps.length && (
           <Paper
             square
-            elevation={0}
+            elevation={2}
             sx={{
               p: 3,
               display: "flex",
@@ -120,14 +129,16 @@ export default function Slide3() {
             <Typography component="legend" mt={4}>
               Please rate this small token of love
             </Typography>
-            <Rating
-              name="simple-controlled"
-              value={value}
-              onChange={(event, newValue) => {
-                setValue(newValue);
-                handleRating(newValue);
-              }}
-            />
+            <Grid cotainer sx={{ justifyContent: "center" }}>
+              <Rating
+                name="simple-controlled"
+                value={value}
+                onChange={(event, newValue) => {
+                  setValue(newValue);
+                  handleRating(newValue);
+                }}
+              />
+            </Grid>
             {showThankYou && (
               <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
                 <b>Thank You</b>
